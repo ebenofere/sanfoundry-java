@@ -1,25 +1,25 @@
-// java program to check whether a given number is even or odd
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Practice {
+
+    // a program to check if a given number is even or odd
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        double num;
-        System.out.println("Enter the number");
+        // declare an integer
+        int num;
 
-        try {
-            num = Double.parseDouble(br.readLine());
-        } catch (Exception e) {
-            System.out.println("An error occurred");
-            return;
-        }
+        // declare a scanner
+        Scanner s = new Scanner(System.in);
 
+        System.out.println("Enter the number you want to check");
+
+        // read the integer input and store it in num
+        num = s.nextInt();
+
+        // if-else statement
         if (num % 2 == 0) {
-            System.out.println("This number is an even number");
+            System.out.println("The number " + num + " is an even number");
         } else {
-            System.out.println("This number is actually an odd number");
+            System.out.println("The number " + num + " is an odd number");
         }
     }
 }
