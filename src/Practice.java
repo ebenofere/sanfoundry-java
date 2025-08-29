@@ -1,25 +1,25 @@
+// java program to check whether a given number is even or odd
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Practice {
-    // function to calculate the area of a rhombus
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int length1, length2;
-        System.out.println("Enter the length of the diagonals of the rhombus");
+        double num;
+        System.out.println("Enter the number");
 
         try {
-            length1 = Integer.parseInt(br.readLine());
-            length2 = Integer.parseInt(br.readLine());
+            num = Double.parseDouble(br.readLine());
         } catch (Exception e) {
             System.out.println("An error occurred");
             return;
         }
 
-        if (length1 <= 0 || length2 <= 0) {
-            System.out.print("Wrong input");
+        if (num % 2 == 0) {
+            System.out.println("This number is an even number");
+        } else {
+            System.out.println("This number is actually an odd number");
         }
-
-        System.out.println("Area of Rhombus: " + (length1 * length2) / 2);
     }
 }
